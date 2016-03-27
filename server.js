@@ -1,19 +1,9 @@
 var express = require('express');
 var app = express(0);
 var PORT = 3000;
-var dateFormat = require('dateformat');
 
-var middleware = {
-	requireAuthentication: function (req, res, next) {
-		console.log('Private Route Hit!');
-		next();  //if user logged in, call next
-	},
-	logger: function(req, res, next) {
-		console.log('Request(' + dateFormat(new Date()) + '): ' + req.method + ' ' + req.originalUrl);
-		next();
-	}
-};
 
+var middleware = require('./middleware');
 app.use(middleware.logger);
 
 
