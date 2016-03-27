@@ -8,7 +8,6 @@ app.use(middleware.logger);
 
 
 // called before routes defined; putting here adds to all routes below
-///app.use(middleware.requireAuthentication);
 
 // route, function
 // req holds data sent from user
