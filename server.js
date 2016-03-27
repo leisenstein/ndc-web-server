@@ -28,7 +28,7 @@ app.use(middleware.logger);
 // get corresponsds to http method
 // only require Auth for this route
 app.get('/about', middleware.requireAuthentication,function(req, res) {
-   res.send('About Page');
+   res.send('About Us!');
 });
 
 
